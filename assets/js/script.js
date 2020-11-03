@@ -54,7 +54,7 @@ function transformWord() {
     document.getElementById('wordToGuess').innerHTML = dash.join('');
 }
 
-//Fonction qui regarde si la lettre choisie est correcte ou incorrecte. Si elle est correcte, la fonction exécute gussedWord et gameWon,
+//Fonction qui regarde si la lettre choisie est correcte ou incorrecte. Si elle est correcte, la fonction exécute gussedWord et gameWin,
 //sinon la fonction exécute image, updateMistakes et gameLost.
 function guess(chosenLetter) {
     guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
@@ -63,7 +63,7 @@ function guess(chosenLetter) {
 
     if (answer.indexOf(chosenLetter) >= 0) {
         guessedWord();
-        gameWon();
+        gameWin();
         console.log('won');
     } else if (answer.indexOf(chosenLetter) === -1) {
         mistakes = mistakes + 1;
@@ -81,7 +81,7 @@ function guessedWord() {
 }
 
 //Fonction qui affiche you won si l'utilisateur a gagné.
-function gameWon() {
+function gameWin() {
     if (wordStatus === answer) {
         alert('congratulations ! You found by making ' + mistakes + ' error(s)');
         reset();
