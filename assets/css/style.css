@@ -1,0 +1,24 @@
+body{
+    color: white;
+}
+
+img{
+    display: block;
+    margin: auto;
+}
+#wordToGuess{
+    text-align: center;
+}
+#keyboard{
+    display: block;
+    margin: auto;
+}
+#maxWrong{
+    color: #AA0000;
+    font-weight: bold;
+}
+#boxHangman{
+    background-color: rgb(224, 224, 224);
+    color: black;
+    border-radius: 5px;
+}
